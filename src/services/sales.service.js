@@ -1,15 +1,13 @@
 const salesModel = require('../models/sales.model');
 
-
 const insertSale = async (sales) => {
   const insertId = await salesModel.insertSales(sales);
-
 
   const response = { id: insertId, itemsSold: sales };
 
   const newSale = {
     status: 201,
-    message: response
+    message: response,
   };
 
   return newSale;
@@ -28,5 +26,5 @@ const SalesById = async (id) => {
 module.exports = {
   insertSale,
   listOfSales,
-  SalesById
-}
+  SalesById,
+};

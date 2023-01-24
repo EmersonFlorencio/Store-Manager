@@ -1,10 +1,10 @@
 const { productsService } = require('../services/index');
-const  salesModel  = require('../models/sales.model');
+const salesModel = require('../models/sales.model');
 
 const validateSale = (req, res, next) => {
   const sales = req.body;
   const haveProductId = sales.every((sale) => sale.productId);
-  const MinQuantity= sales.every((sale) => sale.quantity > 0);
+  const MinQuantity = sales.every((sale) => sale.quantity > 0);
   const haveQuantity = sales.every((sale) => sale.quantity !== undefined);
 
   if (!haveProductId) {
@@ -40,5 +40,5 @@ const validateIfHaveSales = async (req, res, next) => {
 module.exports = {
   validateSale,
   validateProduct,
-  validateIfHaveSales
-}
+  validateIfHaveSales,
+};

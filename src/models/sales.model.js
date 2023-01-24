@@ -8,7 +8,6 @@ const insertSales = async (sales) => {
   sales.forEach((elem) =>
     connection.execute(querySaleProduct, [insertId, elem.productId, elem.quantity]));
 
-
   return insertId;
 };
 
@@ -41,7 +40,6 @@ ORDER BY sales.id, salesProduct.product_id
   
   return sales;
 };
-
 
 module.exports = {
   insertSales,

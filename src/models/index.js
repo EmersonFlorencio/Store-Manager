@@ -3,5 +3,5 @@ const SalesModel = require('./sales.model');
 
 module.exports = {
   productsModel,
-  SalesModel
+  SalesModel,
 };
